@@ -1,0 +1,130 @@
+/* ===================================
+   RAIN Lab Design System
+   CSS Custom Properties (Variables)
+   =================================== */
+
+:root {
+  /* ============= Colors ============= */
+
+  /* Primary Colors (from logo) */
+  --color-sky-blue: #0099FF;
+  --color-navy: #003366;
+  --color-dark-navy: #001a33;
+  --color-black: #000000;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-light-gray: #F8F9FA;
+  --color-medium-gray: #6C757D;
+  --color-border-gray: #E9ECEF;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-sky-blue);
+  --color-primary-dark: var(--color-navy);
+  --color-text-primary: var(--color-dark-navy);
+  --color-text-secondary: var(--color-medium-gray);
+  --color-background: var(--color-white);
+  --color-background-alt: var(--color-light-gray);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0099FF 0%, #003366 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(0, 153, 255, 0.9) 0%, rgba(0, 51, 102, 0.9) 100%);
+
+  /* ============= Typography ============= */
+
+  /* Font Families */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.5rem;       /* 24px */
+  --font-size-2xl: 2.25rem;     /* 36px */
+  --font-size-3xl: 3rem;        /* 48px */
+  --font-size-4xl: 3.75rem;     /* 60px */
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+
+  /* ============= Spacing ============= */
+
+  /* Base unit: 8px */
+  --space-xs: 0.5rem;      /* 8px */
+  --space-sm: 1rem;        /* 16px */
+  --space-md: 1.5rem;      /* 24px */
+  --space-lg: 2rem;        /* 32px */
+  --space-xl: 3rem;        /* 48px */
+  --space-2xl: 4rem;       /* 64px */
+  --space-3xl: 6rem;       /* 96px */
+
+  /* Section Padding */
+  --section-padding-vertical: 5rem;    /* 80px */
+  --section-padding-horizontal: 2rem;  /* 32px */
+
+  /* Container */
+  --container-max-width: 1200px;
+
+  /* ============= Border & Radius ============= */
+
+  --border-radius-sm: 0.25rem;   /* 4px */
+  --border-radius-md: 0.5rem;    /* 8px */
+  --border-radius-lg: 1rem;      /* 16px */
+  --border-radius-xl: 1.5rem;    /* 24px */
+  --border-radius-full: 50%;
+
+  --border-width: 1px;
+  --border-color: var(--color-border-gray);
+
+  /* ============= Shadows ============= */
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* ============= Transitions ============= */
+
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* ============= Z-Index ============= */
+
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-fixed: 300;
+  --z-index-modal-backdrop: 400;
+  --z-index-modal: 500;
+  --z-index-tooltip: 600;
+
+  /* ============= Breakpoints (for reference) ============= */
+  /* These can't be used directly in CSS, but documented here */
+  /*
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1280px;
+  */
+}
+
+/* ============= Dark Mode Support (Future Enhancement) ============= */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0a0a0a;
+    --color-text-primary: #ffffff;
+    --color-background-alt: #1a1a1a;
+  }
+}
+*/

@@ -1,0 +1,524 @@
+/* ===================================
+   RAIN Lab Responsive Styles
+   Mobile-first approach with breakpoints
+   =================================== */
+
+/* ============= Tablet & Below (< 1024px) ============= */
+
+@media (max-width: 1023px) {
+
+  /* Typography adjustments */
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Spacing adjustments */
+  :root {
+    --section-padding-vertical: 3rem;
+  }
+
+  /* Research Leader */
+  .leader-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .leader-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Members Grid */
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  /* Publications */
+  .publication-header {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .year-badge {
+    align-self: flex-start;
+  }
+
+  /* News */
+  .news-item {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+  }
+
+  .news-date {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+  }
+}
+
+/* ============= Mobile & Below (< 768px) ============= */
+
+@media (max-width: 767px) {
+
+  /* Base font size adjustment */
+  html {
+    font-size: 15px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-base);
+  }
+
+  /* Spacing */
+  :root {
+    --section-padding-vertical: 2.5rem;
+    --section-padding-horizontal: 1rem;
+  }
+
+  .section-title {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Container */
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* Header & Navigation */
+  .header .container {
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-xs);
+  }
+
+  .logo {
+    height: 75px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: var(--space-3xl) var(--space-lg);
+    box-shadow: var(--shadow-xl);
+    transition: right var(--transition-base);
+    z-index: var(--z-index-modal);
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: var(--font-size-lg);
+    border-bottom: 1px solid var(--color-border-gray);
+  }
+
+  .nav-menu a.active::after {
+    left: var(--space-md);
+    right: auto;
+    width: 30%;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: 75vh;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Research Leader */
+  .leader-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .leader-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .leader-info h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .leader-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .leader-credentials {
+    font-size: var(--font-size-base);
+  }
+
+  .interests-tags {
+    justify-content: center;
+  }
+
+  .leader-links {
+    justify-content: center;
+  }
+
+  .leader-bio {
+    text-align: left;
+  }
+
+  /* PI Section */
+  .pi-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  /* Members Grid */
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .member-image {
+    height: 280px;
+  }
+
+  .member-info {
+    padding: var(--space-md);
+  }
+
+  .member-links {
+    flex-direction: column;
+  }
+
+  .member-links .btn-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Publications */
+  .publications-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .filter-container {
+    width: 100%;
+  }
+
+  .year-filter {
+    width: 100%;
+  }
+
+  .publications-list {
+    gap: var(--space-lg);
+  }
+
+  .publication-item {
+    padding: var(--space-lg);
+  }
+
+  .publication-header {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .year-badge {
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-size-base);
+  }
+
+  .publication-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .publication-links {
+    flex-direction: column;
+  }
+
+  .publication-links .btn-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* News Section */
+  .news-grid {
+    gap: var(--space-lg);
+  }
+
+  .news-item {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+
+  .news-date {
+    width: 60px;
+    height: 60px;
+  }
+
+  .news-day {
+    font-size: var(--font-size-xl);
+  }
+
+  .news-month {
+    font-size: var(--font-size-xs);
+  }
+
+  .news-content h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Alumni Section */
+  .alumni-year-heading {
+    font-size: var(--font-size-xl);
+  }
+
+  .alumni-item {
+    padding: var(--space-md);
+  }
+
+  .alumni-name {
+    font-size: var(--font-size-base);
+  }
+
+  .alumni-details,
+  .alumni-current {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--space-2xl) 0 var(--space-lg);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .social-link {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ============= Small Mobile (< 480px) ============= */
+
+@media (max-width: 479px) {
+
+  /* Even smaller adjustments */
+  html {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .logo {
+    height: 65px;
+  }
+
+  .leader-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .member-image {
+    height: 250px;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .news-date {
+    margin: 0 auto;
+  }
+
+  .year-badge {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ============= Large Desktop (> 1440px) ============= */
+
+@media (min-width: 1440px) {
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+/* ============= Print Styles ============= */
+
+@media print {
+
+  .header,
+  .menu-toggle,
+  .hero-cta,
+  .footer-social,
+  .btn,
+  .filter-container {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  .publication-item,
+  .news-item,
+  .alumni-item {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+  }
+}
+
+/* ============= Reduced Motion ============= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============= High Contrast Mode ============= */
+
+@media (prefers-contrast: high) {
+
+  :root {
+    --color-primary: #0066CC;
+    --color-navy: #000066;
+  }
+
+  .btn,
+  .member-card,
+  .publication-item,
+  .news-item {
+    border: 2px solid currentColor;
+  }
+}
